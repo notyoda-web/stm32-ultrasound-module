@@ -1,6 +1,0 @@
-Release/ 
-*.elf 
-*.bin 
-*.hex 
-*.map 
-*.o 

@@ -1,6 +1,0 @@
-../Core/Src/app.c:27:13:handle_packet	24	static
-../Core/Src/app.c:52:6:app_init	8	static
-../Core/Src/app.c:63:6:app_loop	16	static,ignoring_inline_asm
-../Core/Src/app.c:97:6:HAL_UARTEx_RxEventCallback	16	static
-../Core/Src/app.c:103:6:HAL_UART_TxCpltCallback	16	static
-../Core/Src/app.c:108:6:HAL_UART_ErrorCallback	16	static

@@ -1,4 +1,0 @@
-../Core/Src/protocol.c:3:9:proto_checksum	2
-../Core/Src/protocol.c:10:8:proto_encode	3
-../Core/Src/protocol.c:23:6:proto_parser_init	1
-../Core/Src/protocol.c:35:16:proto_parser_feed	13
