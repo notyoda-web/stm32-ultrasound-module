@@ -14,6 +14,7 @@ A high-precision, hardware-timed ultrasonic ranging firmware designed for the ST
 * **Telemetry Interface:** USART1 configured at **115200 Baud, 8 Data Bits, No Parity, 1 Stop Bit (115200 8N1)** for transmitting formatted distance telemetry.
 
 ##physical limitation
+
 Using separate timer channels for the rising and falling edges was chosen because the STM32F103 (Blue Pill) hardware lacks the ability to capture both rising and falling edges on a single channel simultaneously for this type of measurement. Attempting to configure a single channel for both edges cannot independently isolate the pulse width without manual state toggling and software edge tracking, which introduces latency and tracking errors. By dedicating Channel 1 to capture the rising edge and automatically reset the timer counter, and Channel 2 (in indirect mode) to capture the falling edge, the hardware directly yields the exact pulse width in microseconds with cycle-accurate precision. This design completely eliminates software ambiguity, overcomes the chip's single-channel limitations, ensures reliable timing across rapid sensor pings, and maintains clean, predictable telemetry streaming over UART.
 ---
 
